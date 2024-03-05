@@ -8,6 +8,7 @@ use App\Mail\booking as bookingmail;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Mail;
+use Twilio\Rest\Client;
 
 
 
@@ -17,6 +18,9 @@ class UserController extends Controller
     public function create(){
         return view('ClassBooking.freeClassForm');
     }
+
+   public function sms(){}
+
 
 
     //create new free class booking
@@ -41,18 +45,22 @@ class UserController extends Controller
         //hash password
        // $formFields['password'] = bcrypt($formFields['password']);
       // dd( $formFields);
-        //create booking
-        // $booking = new Booking;
-        // $booking->parent_name = $request->parent_name;
-        // $booking->child_name = $request->child_name;
-        // $booking->age = $request->age;
-        // $booking->email = $request->email;
-        // $booking->phone = $request->phone;
-        // $booking->classlevel = $request->classlevel;
-        // $booking->subject = $request->subject;
-        // $booking->time_schedule = $request->time_schedule;
-        // $booking->lesson_needs = $request->lesson_needs;
-        // $booking->save();
+        //select google - meet link based on days //or should it be random??
+        $mydate = $request->time_schedule;
+        date('w', strtotime($mydate));
+     dd(date("l"));
+        $videolink="";
+       if(date("l")=="Monday"){
+         $videolink="https://meet.google.com/wix-fdkv-pbt";
+       }elseif(date("l")=="Tuesday"){
+        $videolink="https://meet.google.com/mvz-qsag-iaj";
+       }elseif(date("l")=="Wednesday"){
+        $videolink="https://meet.google.com/aeq-zjpx-jaq";
+      }elseif(date("l")=="Thursday"){
+       $videolink="https://meet.google.com/woz-xfuz-rwz";
+      }elseif(date("l")=="Friday"){
+        $videolink="https://meet.google.com/nfz-ttbh-ezf";
+      }
 
 
 
@@ -72,12 +80,28 @@ class UserController extends Controller
             'classlevel' => $request->get('classlevel'),
             'lesson_needs' => $request->get('lesson_needs'),
             'time_schedule' => $request->get('time_schedule'),
+            'videolink'=>$videolink,
         ];
          
-       // Mail::to('bookings@kerithfountain.com')->send(new bookingmail($mailData));
-       // Mail::to($mailData['email'])->send(new bookingmail($mailData));
+        Mail::to('bookings@kerithfountain.com')->send(new bookingmail($mailData));
+        Mail::to($mailData['email'])->send(new bookingmail($mailData));
 //dd($mailData);
-        
+
+      //Send SMS
+        $sid = getenv("TWILIO_SID");
+        $token = getenv("TWILIO_TOKEN");
+        $twilio_phone = getenv("TWILIO_PHONE");
+        $twilio = new Client($sid, $token);
+
+        $message = $twilio->messages
+                  ->create("+2348023658915", // to
+                           [
+                               "body" => 'Class on '.$request->get('time_schedule').'Link: '. $videolink,
+                               "from" => $twilio_phone
+                           ]
+                  );
+
+//print($message->sid);
       
         return redirect('/')->with('message','Booked a free class; Check email for further details');
     }
