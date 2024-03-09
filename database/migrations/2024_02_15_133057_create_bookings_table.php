@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('child_name');
-            $table->integer('age');
-            $table->integer('classlevel');
+            $table->string('age');
+            $table->string('classlevel');
             $table->string('time_schedule');
             $table->string('subject');
             $table->text('lesson_needs');;
