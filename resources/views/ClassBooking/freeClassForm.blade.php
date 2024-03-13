@@ -16,7 +16,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Book a Free Class') }}</div>
+                <div class="card-header">{{ __('Book a Class - Its free!') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('booking.store') }}">

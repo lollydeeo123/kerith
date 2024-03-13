@@ -48,7 +48,7 @@ class UserController extends Controller
         //select google - meet link based on days //or should it be random??
         $mydate = $request->time_schedule;
         date('w', strtotime($mydate));
-     dd(date("l"));
+     //dd(date("l"));
         $videolink="";
        if(date("l")=="Monday"){
          $videolink="https://meet.google.com/wix-fdkv-pbt";
