@@ -1,16 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{--EXTRA STYLES--}}
-@push('page-style')
-
-   
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
- 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-   
-    
-@endpush {{--END OF STYLES--}}
 
 <div class="container">
     <div class="row justify-content-center">

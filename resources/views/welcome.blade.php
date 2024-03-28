@@ -45,7 +45,7 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="{{ url('/') }}" class="navbar-brand">
-                <h1 class="m-0 text-primary"><img src="images/kerithlogo.png" width="200"></i></h1>
+                <h1 class="m-0 text-primary">Kerith Fountain</i></h1>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@
                     <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                     <a href="#learnmore" class="nav-item nav-link">About Us</a>
                     <a href="#grouplessons" class="nav-item nav-link">Group Lessons</a>
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                            
@@ -65,9 +65,45 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="404.html" class="dropdown-item">404 Error</a>
                         </div>
-                    </div>
+                    </div> -->
                     <a href="#contact" class="nav-item nav-link">Contact Us</a>
                 </div>
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+
                 <a href="{{ url('/book-a-class') }}" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 d-none d-lg-block">Book a free class<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>
@@ -282,7 +318,7 @@
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
+                                            <small>Mon 4-5 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
@@ -316,19 +352,19 @@
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
                                             <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
+                                            <small>7-10 Years</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
+                                            <small>Mon 5-6 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
+                                            <small>10 Kids</small>
                                         </div>
                                     </div>
                                 </div>
@@ -362,7 +398,7 @@
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
+                                            <small>Tue 5-6 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
@@ -384,10 +420,10 @@
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">Language & Speaking</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
+                                        <!-- <img class="rounded-circle flex-shrink-0" src="images/user.jpg" alt="" style="width: 45px; height: 45px;"> -->
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                            <small>Teacher</small>
+                                            <!-- <h6 class="text-primary mb-1">Jhon Doe</h6> 
+                                            <small>Teacher</small>-->
                                         </div>
                                     </div>
                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
@@ -408,7 +444,7 @@
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
+                                            <small>10 Kids</small>
                                         </div>
                                     </div>
                                 </div>
@@ -418,16 +454,16 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="classes-item">
                             <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-5.jpg" alt="">
+                                <img class="img-fluid rounded-circle" src="images/classes-5.jpg" alt="">
                             </div>
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">Religion & History</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
-                                        <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                        <div class="ms-3">
-                                            <h6 class="text-primary mb-1"></h6>
-                                            <small>Teacher</small>
+                                        <!-- <img class="rounded-circle flex-shrink-0" src="images/user.jpg" alt="" style="width: 45px; height: 45px;">-->
+                                        <div class="ms-3"> 
+                                            <!-- <h6 class="text-primary mb-1"></h6>
+                                            <small>Teacher</small> -->
                                         </div>
                                     </div>
                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
@@ -442,13 +478,13 @@
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
+                                            <small>Wed 9-10 AM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
+                                            <small>10 Kids</small>
                                         </div>
                                     </div>
                                 </div>
@@ -458,7 +494,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="classes-item">
                             <div class="bg-light rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-6.jpg" alt="">
+                                <img class="img-fluid rounded-circle" src="images/classes-6.jpg" alt="">
                             </div>
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">General Knowledge</a>
@@ -488,7 +524,7 @@
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>30 Kids</small>
+                                            <small>10 Kids</small>
                                         </div>
                                     </div>
                                 </div>
@@ -665,28 +701,28 @@
 
 
         <!-- Footer Start -->
-        <div id="contact" style="background-color:mediumorchid" class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="contact" style="background-color:#FFF5f3" class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
-                <div class="row g-5">
+                <div class="row g-5" style="color:#000000">
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Get In Touch</h3>
+                        <h3 class="text-primary mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>6 Olaiya CLose, Lagos, Nigeria</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234 903 193277</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kerithfountain.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <div class="d-flex pt-2" >
+                            <a class="btn btn-outline-light btn-social" style="color:#000000" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" style="color:#000000" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" style="color:#000000" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" style="color:#000000" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Quick Links</h3>
-                        <a class="btn btn-link text-white-50" href="">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                        <h3 class="text-primary mb-4">Quick Links</h3>
+                        <a class="btn btn-link"  style="color:#000000" href="">About Us</a>
+                        <a class="btn btn-link" style="color:#000000"  href="">Contact Us</a>
+                        <a class="btn btn-link" style="color:#000000" href="">Our Services</a>
+                        <a class="btn btn-link" style="color:#000000" href="">Privacy Policy</a>
+                        <a class="btn btn-link" style="color:#000000" href="">Terms & Condition</a>
                     </div>
                     <!-- <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Photo Gallery</h3>
