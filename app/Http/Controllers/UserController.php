@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Mail;
 use Twilio\Rest\Client;
+use Carbon\Carbon;
 
 
 
@@ -16,6 +17,16 @@ class UserController extends Controller
 {
     //Show free booking form
     public function create(){
+      //set booking dates
+$today = Carbon::now()->format('d');
+$today_is = $today + 1;
+
+date('w', strtotime($today_is));
+//$today_is = $today_is;
+dd(date("l d"));//the day remained without adding +1
+//Carbon::parse('Monday of this week');
+//dd();
+
         return view('ClassBooking.freeClassForm');
     }
 
@@ -60,6 +71,9 @@ class UserController extends Controller
        $videolink="https://meet.google.com/woz-xfuz-rwz";
       }elseif(date("l")=="Friday"){
         $videolink="https://meet.google.com/nfz-ttbh-ezf";
+      }else{
+        //this is wednesday video link. change it
+        $videolink="https://meet.google.com/aeq-zjpx-jaq";
       }
 
 
