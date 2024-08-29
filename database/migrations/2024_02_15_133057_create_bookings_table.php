@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('age');
             $table->string('classlevel');
             $table->string('time_schedule');
+            $table->string('lesson_day');
             $table->string('subject');
             $table->text('lesson_needs');;
             

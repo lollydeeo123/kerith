@@ -14,7 +14,7 @@ Your contact details are:
 Email: {{ $mailData['email'] }} <br>
 Phone: {{ $mailData['phone'] }} <br>
 
-Click on the Free Class link below on  <b>{{$mailData['time_schedule']}}</b>. <br>
+Click on the Free Class link below on  <b>{{$mailData['lesson_day']}} at {{$mailData['time_schedule']}}</b>. <br>
 
  <a  href="{{$mailData['videolink']}}">Free Class</a><br>
 

@@ -29,6 +29,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 </head>
 
 <body>
@@ -36,7 +40,7 @@
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">O...</span>
             </div>
         </div>
         <!-- Spinner End -->
@@ -52,7 +56,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ url('/') }}" class="nav-item nav-link active">Home2</a>
                     <a href="#learnmore" class="nav-item nav-link">About Us</a>
                     <a href="#grouplessons" class="nav-item nav-link">Group Lessons</a>
                     <!-- <div class="nav-item dropdown">
@@ -707,7 +711,7 @@
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-primary mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>6 Olaiya CLose, Lagos, Nigeria</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234 903 193277</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234 903 1932 977</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kerithfountain.com</p>
                         <div class="d-flex pt-2" >
                             <a class="btn btn-outline-light btn-social" style="color:#000000" href=""><i class="fab fa-twitter"></i></a>
@@ -786,15 +790,28 @@
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+   @if (session()->has('message')) 
+   <script>
+        swal("Congratulations","{!!session()->get('message')!!}","success",{
+            button:"Ok"
+        });
+        
+    </script>
+     @endif  
 </body>
 
 </html>

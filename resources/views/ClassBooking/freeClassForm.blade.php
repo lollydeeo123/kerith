@@ -125,20 +125,60 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>                        
+                        </div> 
+                        
+                        <div class="row mb-3">
+                            <label for="lesson_day" class="col-md-4 col-form-label text-md-end">{{ __('Lesson Day') }}</label>
+
+                            <div class="col-md-6">
+                            <select class="form-control" name="lesson_day" id="lesson_day"  required>
+                              <option value="" selected>Select Day</option>
+                              //populate options
+
+                                @foreach ($dates as $date) 
+                                    <option value="{{$date}}" >{{$date}}</option>
+                                @endforeach 
+                              
+                              
+                            </select>
+                            
+                                @error('lesson_day')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                 
+
+                                
+                            </div>
+                            
+                        </div> 
+                        
+                        
+
                         <div class="row mb-3">
                             <label for="time_schedule" class="col-md-4 col-form-label text-md-end">{{ __('Lesson Time') }}</label>
 
-                            <div class='col-sm-6'>
-                              <div class="form-group">
-        
-                                <div class='input-group date'  id='datetime'>
-                                  <input type='text'name='time_schedule' id='time_schedule' class="form-control" />
-                                   <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                   </span>
-                                </div>
-                              </div>
+                            <div class="col-md-6">
+                            <select class="form-control" name="time_schedule" id="time_schedule" >
+                              <option value="" selected>Select Time</option>
+                              //populate options
+
+                                @foreach ($hours as $date) 
+                                    <option value="{{$date}}" >{{$date}}</option>
+                                @endforeach 
+                              
+                              
+                            </select>
+                            
+                                @error('subject')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                 
+
+                                
                             </div>
                         </div>
                         
@@ -180,17 +220,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
  
 
-    
-    
-    <script type="text/javascript">
-        $(function() {
-           $('#datetime').datetimepicker({
-            minDate:new Date(),
-            disabledDates: [new Date()],          
-            daysOfWeekDisabled: [0,6], 
-           });
-          
-           
-        });
-    </script>   
 @endpush

@@ -16,6 +16,7 @@ class Booking extends Model
         'age',
         'classlevel',
         'time_schedule',
+        'lesson_day',
         'subject',
         'lesson_needs'
     ];
