@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-  
+   
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
 
@@ -56,7 +56,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="{{ url('/') }}" class="nav-item nav-link active">Home2</a>
+                    <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                     <a href="#learnmore" class="nav-item nav-link">About Us</a>
                     <a href="#grouplessons" class="nav-item nav-link">Group Lessons</a>
                     <!-- <div class="nav-item dropdown">
@@ -225,8 +225,14 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-4">Learn More About Our Work</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos, ipsum labore duo duo sit no sea diam. Et dolor et kasd ea. Eirmod diam at dolor est vero nonumy magna.</p>
+                        <p>At Kerith Fountain of Learning, our mission is to ensure children are given the necessary 
+                            help they need to excel in their studies and school work. Whether the child is gifted or 
+                            the child has learning challenges, we are equipped to ensure that deep 
+                            learning takes place and the child's potentials are fully explored</p>
+                        <p class="mb-4">We strongly believe that success is the greatest motivation 
+                            in learning. Our personalized attention helps the child overcome fears,
+                             anxieties, or self-doubt...
+                        </p>
                         <div class="row g-4 align-items-center">
                             <div class="col-sm-6">
                                 <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
@@ -274,8 +280,8 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4">You can become A Teacher</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                                <p class="mb-4">Are you passionate about teaching young people? 
+                                    Do you have what it takes? You can join our family by applying here.
                                 </p>
                                 <a class="btn btn-primary py-3 px-5" style="background-color:mediumorchid;border-color:mediumorchid" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
                             </div>
@@ -605,16 +611,16 @@
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Meet our Teachers</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>Our teachers are qualified to ensure that deep learning takes place in a fun environment. 
+                        They are trained to understand the best teaching methods to suit your ward</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="images/team-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle w-50" src="images/team3.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                                <h3>Olubunmi</h3>
+                                <p> Head Teacher</p>
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -625,29 +631,29 @@
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid rounded-circle w-50" src="images/teacher_atirola.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
+                                <h3>Atirola</h3>
+                                <p>Teacher</p>
+                                <!-- <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid rounded-circle w-50" src="images/team2.jpg" alt="">
                             <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
+                                <h3>Dorcas</h3>
+                                <p>Teacher</p>
+                                <!-- <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
                                     <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -662,7 +668,7 @@
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Our Clients Say!</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>These are some of the feedback from our clients. You can also join this league of satisfied parents by signing up for a free class</p>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="testimonial-item bg-light rounded p-5">
@@ -688,11 +694,11 @@
                         </div>
                     </div>
                     <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">The satisfactory emotion displayed by this father could be yours! Sign up today for satisfactory home lessons for your children and wards</p>
+                        <p class="fs-5">The satisfaction of seeing my boys finish high school in flying colors! Kerith Fountain of Learning Home lessons is surely the way to go</p>
                         <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="images/testimonial-3.jpg" style="width: 90px; height: 90px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="images/randomdad.jpg" style="width: 90px; height: 90px;">
                             <div class="ps-3">
-                                <h3 class="mb-1">Random Dad</h3>
+                                <h3 class="mb-1">Coach Femi</h3>
                                 <span>Engineer</span>
                             </div>
                             <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
@@ -721,44 +727,44 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4"></h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
                         <h3 class="text-primary mb-4">Quick Links</h3>
                         <a class="btn btn-link"  style="color:#000000" href="">About Us</a>
                         <a class="btn btn-link" style="color:#000000"  href="">Contact Us</a>
                         <a class="btn btn-link" style="color:#000000" href="">Our Services</a>
                         <a class="btn btn-link" style="color:#000000" href="">Privacy Policy</a>
-                        <a class="btn btn-link" style="color:#000000" href="">Terms & Condition</a>
+                        <a class="btn btn-link" style="color:#000000" href="">Terms & Conditions</a>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Photo Gallery</h3>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-primary mb-4">Newsletter</h3>
+                        <p>You can sign up for our periodic newsletter here.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="container">
