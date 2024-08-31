@@ -135,20 +135,18 @@ class UserController extends Controller
         $sid = getenv("TWILIO_SID");
         $token = getenv("TWILIO_TOKEN");
         $twilio_phone = getenv("TWILIO_PHONE");
-       //uncomment for sms
-       // $twilio = new Client($sid, $token);
+      
+       $twilio = new Client($sid, $token);
 
-        //uncomment for sms
-        // $message = $twilio->messages
-        //           ->create("+2348023238979", // to
-        //                    [
-        //                        "body" => 'Class on '.$request->get('lesson_day').' '.$request->get('time_schedule').'Link: '. $videolink,
-        //                        "from" => $twilio_phone
-        //                    ]
-        //           );
+       $message = $twilio->messages
+                  ->create("+2348023238979", // to
+                           [
+                               "body" => 'Class on '.$request->get('lesson_day').' '.$request->get('time_schedule').'Link: '. $videolink,
+                               "from" => $twilio_phone
+                           ]
+                  );
 
 //print($message->sid);
-      //work on redirect message to show on home page
-        return redirect('/')->with('message','Your Free class has been booked successfully.\n Check your email for further details');
+             return redirect('/')->with('message','Your Free class has been booked successfully.\n Check your email for further details');
     }
 }
