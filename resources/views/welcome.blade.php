@@ -40,7 +40,7 @@
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">O...</span>
+            <span class="sr-only">Kerith...</span>
             </div>
         </div>
         <!-- Spinner End -->
@@ -82,9 +82,9 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
+                            @if (Route::has('sign-up'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('sign-up') }}">{{ __('Sign Up') }}</a>
                                 </li>
                             @endif
                         @else
@@ -230,7 +230,7 @@
                             the child has learning challenges, we are equipped to ensure that deep 
                             learning takes place and the child's potentials are fully explored</p>
                         <p class="mb-4">We strongly believe that success is the greatest motivation 
-                            in learning. Our personalized attention helps the child overcome fears,
+                            in learning. Our personalized, real-time attention helps the child overcome fears,
                              anxieties, or self-doubt...
                         </p>
                         <div class="row g-4 align-items-center">
@@ -298,10 +298,13 @@
             <div class="container">
                 <div id="grouplessons" class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Group Lessons</h1>
-                    <p>You can also benefit from our group lessons.</p>
+                    <p>You can also benefit from our group lessons. All our live classes are <i>Funteractive</i> and synchronous 
+                    This means each child gets the immediate feedback they deserve  and at great value.
+
+                </p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="classes-item">
                             <div class="bg-light rounded-circle w-75 mx-auto p-3">
                                 <img class="img-fluid rounded-circle" src="{{asset('images/classes-1.jpg')}}" alt="">
@@ -316,27 +319,71 @@
                                             <small>Teacher</small>
                                         </div>
                                     </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$44.99</span>
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
+                                            <h6 class="text-primary mb-1">Grade:</h6>
+                                            <small>Pre K - Kindergarten</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>Mon 4-5 PM</small>
+                                            <small>Mondays 6-7 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>10 Kids</small>
+                                            <small>6 Children</small>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{{asset('images/classes-1.jpg')}}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Writing</a>
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    
+                                <!-- <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Olubunmi Olanrewaju</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Grade</h6>
+                                            <small>Pre K - Kindergarten</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>Mon, Wed, Thu 5 - 6 PM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small> 6 Children</small>
+                                        </div>
+                                    </div>
+                                    <span class="d-block text-center mt-3 mb-3" >$44.99/Month</span>
+                                <a class="d-block text-center mt-3 mb-3" href="">
+                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Register</span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -349,34 +396,38 @@
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">Arithmetic</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
+                                    
+                                <!-- <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
                                             <h6 class="text-primary mb-1">Olubunmi Olanrewaju</h6>
                                             <small>Teacher</small>
                                         </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    </div> -->
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>7-10 Years</small>
+                                            <h6 class="text-primary mb-1">Grade</h6>
+                                            <small>Pre K - Kindergarten</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>Mon 5-6 PM</small>
+                                            <small>Mon, Wed, Thu 6 - 7 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>10 Kids</small>
+                                            <small>6 Children</small>
                                         </div>
                                     </div>
+                                    <span class="d-block text-center mt-3 mb-3" >$44.99/Month</span>
+                                <a class="d-block text-center mt-3 mb-3" href="">
+                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Register</span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -389,34 +440,38 @@
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">Reading</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
+                                    
+                                <!-- <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
                                             <h6 class="text-primary mb-1">Olubunmi Olanrewaju</h6>
                                             <small>Teacher</small>
                                         </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    </div> -->
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
+                                            <h6 class="text-primary mb-1">Grade</h6>
+                                            <small>Pre K - Kindergarten</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>Tue 5-6 PM</small>
+                                            <small>Mon, Wed, Thu<br> 5 - 6 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>10 Kids</small>
+                                            <small>6 Children</small>
                                         </div>
                                     </div>
+                                    <span class="d-block text-center mt-3 mb-3" >$44.99/Month</span>
+                                <a class="d-block text-center mt-3 mb-3" href="">
+                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Register</span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -427,36 +482,40 @@
                                 <img class="img-fluid rounded-circle" src="{{asset('images/classes-4.jpg')}}" alt="">
                             </div>
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Language & Speaking</a>
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Number Work</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;"> -->
+                                    
+                                <!-- <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <!-- <h6 class="text-primary mb-1">Jhon Doe</h6> 
-                                            <small>Teacher</small>-->
+                                            <h6 class="text-primary mb-1">Olubunmi Olanrewaju</h6>
+                                            <small>Teacher</small>
                                         </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    </div> -->
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
+                                            <h6 class="text-primary mb-1">Grade:</h6>
+                                            <small>Grade 1 to Grade 10</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
+                                            <small>Mon, Wed, Thu<br> 6 - 7 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>10 Kids</small>
+                                            <small>6 Children</small>
                                         </div>
                                     </div>
+                                    <span class="d-block text-center mt-3 mb-3" >$44.99/Month</span>
+                                <a class="d-block text-center mt-3 mb-3" href="">
+                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Register</span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -467,36 +526,40 @@
                                 <img class="img-fluid rounded-circle" src="{{asset('images/classes-5.jpg')}}" alt="">
                             </div>
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">Religion & History</a>
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">English</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">-->
-                                        <div class="ms-3"> 
-                                            <!-- <h6 class="text-primary mb-1"></h6>
-                                            <small>Teacher</small> -->
+                                    
+                                <!-- <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Olubunmi Olanrewaju</h6>
+                                            <small>Teacher</small>
                                         </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    </div> -->
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
+                                            <h6 class="text-primary mb-1">Grade:</h6>
+                                            <small>Grade 1 to Grade 10</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>Wed 9-10 AM</small>
+                                            <small>Mon, Wed, Thu<br> 6 - 7 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>10 Kids</small>
+                                            <small>6 Children</small>
                                         </div>
                                     </div>
+                                    <span class="d-block text-center mt-3 mb-3" >$44.99/Month</span>
+                                <a class="d-block text-center mt-3 mb-3" href="">
+                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Register</span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -507,36 +570,40 @@
                                 <img class="img-fluid rounded-circle" src="{{asset('images/classes-6.jpg')}}" alt="">
                             </div>
                             <div class="bg-light rounded p-4 pt-5 mt-n5">
-                                <a class="d-block text-center h3 mt-3 mb-4" href="">General Knowledge</a>
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Mathematics</a>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center">
+                                    
+                                <!-- <div class="d-flex align-items-center">
                                         <img class="rounded-circle flex-shrink-0" src="{{asset('images/user.jpg')}}" alt="" style="width: 45px; height: 45px;">
                                         <div class="ms-3">
-                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <h6 class="text-primary mb-1">Olubunmi Olanrewaju</h6>
                                             <small>Teacher</small>
                                         </div>
-                                    </div>
-                                    <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                                    </div> -->
                                 </div>
                                 <div class="row g-1">
                                     <div class="col-4">
                                         <div class="border-top border-3 border-primary pt-2">
-                                            <h6 class="text-primary mb-1">Age:</h6>
-                                            <small>3-5 Years</small>
+                                            <h6 class="text-primary mb-1">Grade:</h6>
+                                            <small>Grade 1 to Grade 7</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-success pt-2">
                                             <h6 class="text-success mb-1">Time:</h6>
-                                            <small>9-10 AM</small>
+                                            <small>Wednesdays<br> 6 - 7 PM</small>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="border-top border-3 border-warning pt-2">
                                             <h6 class="text-warning mb-1">Capacity:</h6>
-                                            <small>10 Kids</small>
+                                            <small>6 Children</small>
                                         </div>
                                     </div>
+                                    <span class="d-block text-center mt-3 mb-3" >$44.99/Month</span>
+                                <a class="d-block text-center mt-3 mb-3" href="">
+                                     <span class="bg-primary text-white rounded-pill py-2 px-3" href="">Register</span>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -672,6 +739,20 @@
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="testimonial-item bg-light rounded p-5">
+                        <p class="fs-5">I got a report from the school that Isabella is doing well. 
+                            She's been scoring high grades.  Thank you for all your support!
+                        I thank God for your presence in our journey</p>
+                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="images/testimonial-0.jpg" style="width: 90px; height: 90px;">
+                            <div class="ps-3">
+                                <h3 class="mb-1">Isabella's Mum</h3>
+                                <span>Georgia, USA</span>
+                            </div>
+                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                        </div>
+                    </div>
+                
+                    <div class="testimonial-item bg-light rounded p-5">
                         <p class="fs-5">After we signed up for the home lessons, Ayomipe moved from being an average student to the top 3 in her class! Thank you, Kerith</p>
                         <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="images/testimonial-1.jpg" style="width: 90px; height: 90px;">
@@ -682,6 +763,7 @@
                             <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
                         </div>
                     </div>
+                    <!--  -->
                     <div class="testimonial-item bg-light rounded p-5">
                         <p class="fs-5">My daughter had some challenges with time calculations. After a few lessons with Kerith, she no longer had issues with time calculations</p>
                         <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">

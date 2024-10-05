@@ -1,18 +1,17 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> @yield('title-bar') | {{ config('app.name', 'Kerith Fountain of Learning') }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+    
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Kerith') }}</title>
-
-    <!-- Fonts 
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    -->
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,24 +30,25 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Scripts -->
-    <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
-    @stack('page-style')  
+    
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @stack('page-style')
 </head>
+
 <body>
-@stack('page-modals')
     <div class="container-xxl bg-white p-0">
-         <!-- Spinner Start -->
-         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+            <span class="sr-only">Kerith...</span>
             </div>
         </div>
         <!-- Spinner End -->
 
 
-         <!-- Navbar Start -->
-         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="{{ url('/') }}" class="navbar-brand">
                 <h1 class="m-0 text-primary">Kerith Fountain</i></h1>
             </a>
@@ -109,15 +109,17 @@
                         @endguest
                     </ul>
 
-                <!-- <a href="{{ url('/book-a-class') }}" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 d-none d-lg-block">Book a free class<i class="fa fa-arrow-right ms-3"></i></a> -->
+                <a href="{{ url('/book-a-class') }}" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 d-none d-lg-block">Book a free class<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
         
-
-        <main class="py-4">
-            @yield('content')
+        <main class="@yield('body-class')" style="background: #FFFFFF;">
+          @yield('content')
         </main>
+        <!-- <main class="py-4">
+            @yield('content')
+        </main> -->
     </div> 
     
        <!-- Footer Start -->
@@ -127,7 +129,7 @@
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-primary mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>6 Olaiya CLose, Lagos, Nigeria</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234 903 193277</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234 903 1932 977</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kerithfountain.com</p>
                         <div class="d-flex pt-2" >
                             <a class="btn btn-outline-light btn-social" style="color:#000000" href=""><i class="fab fa-twitter"></i></a>
@@ -137,44 +139,44 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4"></h3>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="images/classes-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
                         <h3 class="text-primary mb-4">Quick Links</h3>
                         <a class="btn btn-link"  style="color:#000000" href="">About Us</a>
                         <a class="btn btn-link" style="color:#000000"  href="">Contact Us</a>
                         <a class="btn btn-link" style="color:#000000" href="">Our Services</a>
                         <a class="btn btn-link" style="color:#000000" href="">Privacy Policy</a>
-                        <a class="btn btn-link" style="color:#000000" href="">Terms & Condition</a>
+                        <a class="btn btn-link" style="color:#000000" href="">Terms & Conditions</a>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Photo Gallery</h3>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-primary mb-4">Newsletter</h3>
+                        <p>You can sign up for our periodic newsletter here.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="container">
@@ -201,16 +203,35 @@
         <!-- Footer End -->
 
 
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+   @if (session()->has('message')) 
+   <script>
+        swal("Congratulations","{!!session()->get('message')!!}","success",{
+            button:"Ok"
+        });
+        
+    </script>
+     @endif  
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
     @stack('page-script')
 </body>
-</html>
+</html>   

@@ -23,6 +23,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/sign-up', [App\Http\Controllers\LessonController::class, 'index'])->name('sign-up');
+Route::get('/sign-up-form', [App\Http\Controllers\LessonController::class, 'show'])->name('register');
 /*------------------------------------------
 --------------------------------------------
 All Normal Users Routes List
